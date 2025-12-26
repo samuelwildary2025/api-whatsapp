@@ -8,7 +8,7 @@ import { AppService } from './app.service';
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'client'),
-      exclude: ['/api/:path(.*)'],
+      exclude: ['/api/{*path}'],
     }),
   ],
   controllers: [AppController],
